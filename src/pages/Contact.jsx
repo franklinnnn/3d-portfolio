@@ -5,6 +5,7 @@ import Fox from "../models/Fox";
 import Loader from "../components/Loader";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const formRef = useRef();
@@ -66,9 +67,9 @@ const Contact = () => {
   return (
     <section className="relative flex lg:flex-row flex-col max-container h-screen">
       {alert.show && <Alert {...alert} />}
-      {/* <Alert {...alert} /> */}
+
       <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1>get in touch</h1>
+        <h1 className="head-text">Let's talk</h1>
         <form
           action=""
           className="w-full flex flex-col gap-7 mt-14"
@@ -81,7 +82,7 @@ const Contact = () => {
               type="text"
               name="name"
               className="input"
-              placeholder="Franklin"
+              placeholder="Your name"
               required
               value={form.name}
               onChange={handleChange}
@@ -96,7 +97,7 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              placeholder="franklin@gmail.com"
+              placeholder="youremail@gmail.com"
               required
               value={form.email}
               onChange={handleChange}

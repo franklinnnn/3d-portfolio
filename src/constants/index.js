@@ -1,11 +1,6 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-  car,
   contact,
   css,
-  estate,
-  express,
-  git,
   github,
   html,
   javascript,
@@ -14,17 +9,14 @@ import {
   motion,
   mui,
   nextjs,
-  nodejs,
-  pricewise,
   react,
   redux,
-  sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
   typescript,
 } from "../assets/icons";
+import { FaVideo, FaSpotify, FaCar, FaNewspaper } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
+
 import csusb from "../assets/icons/csusb.jpg";
 import sbvc from "../assets/icons/sbvc.png";
 import dsh from "../assets/icons/dsh.jpg";
@@ -145,45 +137,6 @@ export const experiences = [
       "Maintained meticulous records with strong attention to detail using thorough documentation.",
     ],
   },
-  // {
-  //   title: "React Native Developer",
-  //   company_name: "Tesla",
-  //   icon: tesla,
-  //   iconBg: "#fbc3bc",
-  //   date: "Jan 2021 - Feb 2022",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#b7e4c7",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#a2d2ff",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 export const socialLinks = [
@@ -206,8 +159,8 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
-    theme: "btn-back-red",
+    icon: FaVideo,
+    theme: "bg-gradient-to-r from-blue-800 to-indigo-900",
     name: "Video Sharing App",
     description:
       "Developed a full-stack social media app based on popular platforms like TikTok and YouTube, enabling users to share videos and engage with other users.",
@@ -215,8 +168,8 @@ export const projects = [
     repository: "https://github.com/franklinnnn/video-sharing-app",
   },
   {
-    iconUrl: threads,
-    theme: "btn-back-green",
+    icon: FaSpotify,
+    theme: "bg-gradient-to-r from-lime-400 to-lime-500",
     name: "Spotify Tracker",
     description:
       "Created an app for Spotify users, enabling the tracking of listened songs and artists, and building playlists.",
@@ -224,8 +177,8 @@ export const projects = [
     repository: "https://github.com/franklinnnn/spotify-app",
   },
   {
-    iconUrl: car,
-    theme: "btn-back-blue",
+    icon: FaCar,
+    theme: "bg-gradient-to-r from-red-500 to-orange-500",
     name: "Car Finding App",
     description:
       "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
@@ -233,8 +186,8 @@ export const projects = [
     repository: "https://github.com/franklinnnn/car-showcase-app",
   },
   {
-    iconUrl: snapgram,
-    theme: "btn-back-pink",
+    icon: FaMessage,
+    theme: "bg-gradient-to-r from-fuchsia-500 to-pink-500",
     name: "Realtime Chatroom",
     description:
       "Built a simple and lightweight chatroom, allowing users to chat, share photos, and directly message each other.",
@@ -242,16 +195,8 @@ export const projects = [
     repository: "https://github.com/franklinnnn/f-chat",
   },
   {
-    iconUrl: estate,
-    theme: "btn-back-black",
-    name: "Real-Estate Application",
-    description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-    link: "https://github.com/adrianhajdin/projects_realestate",
-  },
-  {
-    iconUrl: summiz,
-    theme: "btn-back-yellow",
+    icon: FaNewspaper,
+    theme: "bg-gradient-to-r from-cyan-500 to-blue-500",
     name: "AI Summarizer Application",
     description:
       "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",

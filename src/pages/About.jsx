@@ -5,12 +5,13 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { skills, educations, experiences } from "../constants";
 import CTA from "../components/CTA";
+
 const About = () => {
   return (
     <section className="max-container">
       <h1 className="head-text">
         Hello, I'm{" "}
-        <span className="blue-gradient_text font-semibold drop-shadow">
+        <span className="gradient-text font-semibold drop-shadow">
           Franklin
         </span>
       </h1>
@@ -31,9 +32,8 @@ const About = () => {
 
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="block-container w-20 h-20">
-              <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
+            <div className="w-20 h-20">
+              <div className="rounded-xl flex justify-center items-center hover:scale-125 transition shadow-md h-full">
                 <img
                   src={skill.imageUrl}
                   alt={skill.name}
@@ -48,7 +48,10 @@ const About = () => {
       <div className="py-16">
         <h3 className="subhead-text">Education</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>Job experience</p>
+          <p>
+            As a student I developed and designed dynamic and interactive web
+            applications.
+          </p>
         </div>
 
         <div className="mt-12 flex">
@@ -62,7 +65,7 @@ const About = () => {
                     <img
                       src={education.icon}
                       alt={education.company_name}
-                      className="w-[60%] h-[60%] object-contain"
+                      className="w-full h-full object-cover rounded-full"
                     />
                   </div>
                 }
@@ -99,7 +102,10 @@ const About = () => {
       <div className="py-8">
         <h3 className="subhead-text">Work Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>Job experience</p>
+          <p>
+            My experience in the health care field leveled up my communication
+            and organization skills in different and challenging environments.
+          </p>
         </div>
         <div className="mt-12 flex">
           <VerticalTimeline>
@@ -112,7 +118,7 @@ const About = () => {
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
-                      className="w-[60%] h-[60%] object-contain"
+                      className="w-full h-full object-cover rounded-full "
                     />
                   </div>
                 }

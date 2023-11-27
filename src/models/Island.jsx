@@ -54,11 +54,11 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "ArrowLeft") {
+    if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") {
       if (!isRotating) setIsRotating(true);
       islandRef.current.rotation.y += 0.01 * Math.PI;
       rotationSpeed.current = 0.0125;
-    } else if (e.key === "ArrowRight") {
+    } else if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") {
       if (!isRotating) setIsRotating(true);
       islandRef.current.rotation.y -= 0.01 * Math.PI;
       rotationSpeed.current = -0.0125;
@@ -66,7 +66,14 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   };
 
   const handleKeyUp = (e) => {
-    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+    if (
+      e.key === "ArrowLeft" ||
+      e.key === "ArrowRight" ||
+      e.key === "a" ||
+      e.key === "d" ||
+      e.key === "A" ||
+      e.key === "D"
+    ) {
       setIsRotating(false);
     }
   };
