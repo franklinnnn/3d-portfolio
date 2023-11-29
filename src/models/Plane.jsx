@@ -10,7 +10,7 @@ const Plane = ({ isRotating, ...props }) => {
     if (isRotating) {
       actions["Take 001"].play();
     } else {
-      actions["Take 001"].stop();
+      actions["Take 001"].play();
     }
   }, [actions, isRotating]);
   return (

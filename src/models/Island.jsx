@@ -83,7 +83,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
       rotationSpeed.current *= dampingFactor;
 
       if (Math.abs(rotationSpeed.current) < 0.001) {
-        rotationSpeed.current = 0;
+        rotationSpeed.current = -0.0001;
       }
       islandRef.current.rotation.y += rotationSpeed.current;
     } else {

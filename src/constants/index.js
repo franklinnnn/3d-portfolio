@@ -98,18 +98,18 @@ export const educations = [
       "Received Bachelor's Degree in Computer Science.",
     ],
   },
-  {
-    school: "San Bernardino Valley College",
-    icon: sbvc,
-    iconBg: "#243276",
-    date: "August 2007 - December 2009",
-    points: [
-      "Collaborated with multidisciplinary teams to contribute to comprehensive care plans for patients, fostering a collaborative healthcare environment.",
-      "Gained hands-on experience in clinical settings, providing direct care and support to individuals with mental health needs.",
-      "Received training in crisis intervention techniques, effectively managing and de-escalating challenging situations.",
-      "Demonstrated adaptability in navigating diverse healthcare scenarios, from outpatient care to inpatient psychiatric settings.",
-    ],
-  },
+  // {
+  //   school: "San Bernardino Valley College",
+  //   icon: sbvc,
+  //   iconBg: "#243276",
+  //   date: "August 2007 - December 2009",
+  //   points: [
+  //     "Collaborated with multidisciplinary teams to contribute to comprehensive care plans for patients, fostering a collaborative healthcare environment.",
+  //     "Gained hands-on experience in clinical settings, providing direct care and support to individuals with mental health needs.",
+  //     "Received training in crisis intervention techniques, effectively managing and de-escalating challenging situations.",
+  //     "Demonstrated adaptability in navigating diverse healthcare scenarios, from outpatient care to inpatient psychiatric settings.",
+  //   ],
+  // },
 ];
 
 export const experiences = [

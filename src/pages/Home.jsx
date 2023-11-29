@@ -6,6 +6,7 @@ import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
+import Sky2 from "../models/Sky2";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -52,15 +53,16 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
+          <directionalLight position={[2, 1, 1]} intensity={1.4} />
+          <ambientLight intensity={0.25} />
           <hemisphereLight
-            skyColor="#b1e1ff"
+            skyColor="#91a4ce"
             groundColor="#000000"
-            intensity={1}
+            intensity={1.2}
           />
           <Bird />
-          <Sky isRotating={isRotating} />
+          {/* <Sky isRotating={isRotating} /> */}
+          <Sky2 isRotating={isRotating} />
           <Island
             scale={islandScale}
             position={islandPosition}
