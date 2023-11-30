@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/Island";
@@ -7,10 +7,27 @@ import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
 import Sky2 from "../models/Sky2";
+import blueWaves from "../assets/blue_waves.mp3";
+import { GiSoundOn, GiSoundOff } from "react-icons/gi";
 
 const Home = () => {
+  const audioRef = useRef(new Audio(blueWaves));
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  audioRef.current.volume = 0.2;
+  audioRef.current.loop = true;
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+    }
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isPlaying]);
+
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -79,6 +96,14 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
+      <div className="absolute bottom-2 left-2">
+        <div
+          className="w-10 h-10 cursor-pointer bg-primary flex justify-center items-center rounded-full text-white"
+          onClick={() => setIsPlaying(!isPlaying)}
+        >
+          {!isPlaying ? <GiSoundOn size={30} /> : <GiSoundOff size={30} />}
+        </div>
+      </div>
     </section>
   );
 };

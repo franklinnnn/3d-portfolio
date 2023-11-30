@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ProjectCard = ({ project, Icon }) => {
   return (
     <div className="lg:w-[400px] w-full" key={project.name}>
-      <div className="block-container w-12 h-12">
+      <div className="block-container w-12 h-12 hover:scale-125 transition">
         <div className={`btn-back rounded-xl ${project.theme}`} />
         <div className="btn-front rounded-xl flex justify-center items-center">
           <Icon size={20} className="text-white" />
@@ -13,9 +13,9 @@ const ProjectCard = ({ project, Icon }) => {
       </div>
 
       <div className="mt-5 flex flex-col">
-        <h4 className="text-2xl font-poppins font-semibold">{project.name}</h4>
+        <h4 className="text-2xl font-switzer font-semibold">{project.name}</h4>
         <p className="mt-2 text-slate-500">{project.description}</p>
-        <div className="mt-5 flex items-center gap-2 font-poppins">
+        <div className="mt-5 flex items-center gap-2 font-switzer">
           <Link
             to={project.link}
             target="_blank"

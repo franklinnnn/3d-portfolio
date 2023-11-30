@@ -5,7 +5,7 @@ import Fox from "../models/Fox";
 import Loader from "../components/Loader";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Slide } from "react-toastify";
 
 const Contact = () => {
   const formRef = useRef();
@@ -46,6 +46,7 @@ const Contact = () => {
       .then(() => {
         setIsLoading(false);
         showAlert({ show: true, text: "Message sent!", type: "success" });
+        toast.success("Message sent!");
         setTimeout(() => {
           hideAlert(false);
           setCurrentAnimation("idle");
@@ -67,7 +68,6 @@ const Contact = () => {
   return (
     <section className="relative flex lg:flex-row flex-col max-container h-screen">
       {alert.show && <Alert {...alert} />}
-
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Let's talk</h1>
         <form

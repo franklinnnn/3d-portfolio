@@ -20,6 +20,7 @@ export default {
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        switzer: ["Switzer", "sans-serif"],
       },
       boxShadow: {
         card: "0px 1px 2px 0px rgba(0, 0, 0, 0.05)",

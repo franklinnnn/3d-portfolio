@@ -32,7 +32,7 @@ const About = () => {
 
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="w-20 h-20">
+            <div className="w-20 h-20" key={skill.name}>
               <div className="rounded-xl flex justify-center items-center hover:scale-125 transition shadow-md h-full">
                 <img
                   src={skill.imageUrl}
